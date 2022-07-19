@@ -1,7 +1,6 @@
 FROM mongo:4.2
 
-RUN usermod --unlock root
+USER mongodb
 RUN mkdir ~/.ssh
 RUN chmod 0700 ~/.ssh
 RUN chmod 0700 ~
-USER mongodb
